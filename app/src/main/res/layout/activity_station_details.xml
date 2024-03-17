@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_charger_background"
+    tools:context=".activities.StationDetailsActivity">
+
+    <ImageView
+        android:id="@+id/charging_station_cover_iv"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/charging_station_cover_img" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/charging_station_img_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/charging_station_cover_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:elevation="20dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/charging_station_demo_img"
+        app:shapeAppearanceOverlay="@style/roundedCoverImageView"
+        app:strokeColor="@color/white"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/tv_charging_station_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/charging_station_img_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Charging Point Station"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_charging_station_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_charging_station_name"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:maxLines="1"
+        android:text="Kaniyapuram,trivandrum,Kerala"
+        android:textColor="@color/sub_text_bg"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/book_now_btn_tv"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_charging_station_address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/submit_button_background"
+        android:elevation="20dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Book Now"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/contact_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_now_btn_tv"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="18dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/contact_num_tv"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/contact_txt_bg"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Contact"
+            android:textColor="@color/green_txt" />
+
+        <TextView
+            android:id="@+id/station_location_tv"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/contact_txt_bg"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Location"
+            android:textColor="@color/green_txt" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/amenities_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_layout"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Amenities"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/amenities_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@id/amenities_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        tools:itemCount="4"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/rv_item_amenities"
+        />
+</RelativeLayout>

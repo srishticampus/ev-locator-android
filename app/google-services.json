@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1061223392012",
+    "project_id": "evlocator-80244",
+    "storage_bucket": "evlocator-80244.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061223392012:android:94ba70c2b88cc7d1551f29",
+        "android_client_info": {
+          "package_name": "com.project.evlocator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRyezgvTKC029IMvczMvFWEpkLAsqHq6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp">
+<RelativeLayout
+    android:id="@+id/item_layout"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/booking_date_bg">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nov"
+            android:fontFamily="@font/poppins"
+            android:textSize="14sp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>

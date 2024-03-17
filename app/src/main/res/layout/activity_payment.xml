@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activities.PaymentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_head"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/charging_station_background"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Payment"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_img_one"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/tv_head"
+            android:scaleType="fitXY"
+            android:src="@drawable/payment_image" />
+
+        <RelativeLayout
+            android:id="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_img_one"
+            android:layout_marginTop="-35dp"
+            android:background="@drawable/payment_top_curved_bg">
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Add Your Card"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/cardNumberEt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/tv_one"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/et_bg"
+                android:hint="Card Number"
+                android:inputType="number"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/expiryDate"
+                android:layout_width="200dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/cardNumberEt"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:background="@drawable/et_bg"
+                android:hint="Expiry date"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="date"
+                android:maxLines="1"/>
+
+
+            <EditText
+                android:id="@+id/cvv"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:padding="10dp"
+                android:layout_below="@id/cardNumberEt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_toRightOf="@id/expiryDate"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:maxLines="1"
+                android:hint="CVC/CVV"
+                android:inputType="number"
+                android:maxLength="3" />
+
+
+
+                <EditText
+                    android:id="@+id/outlinedTextField_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/cvv"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:hint="Cardholder name"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:background="@drawable/et_bg"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:maxLines="1"/>
+            <TextView
+                android:id="@+id/payNowBt"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="24dp"
+                android:layout_height="55dp"
+                android:background="@drawable/submit_button_background"
+                android:elevation="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="P A Y    N O W"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

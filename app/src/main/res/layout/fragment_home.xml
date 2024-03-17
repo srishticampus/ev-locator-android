@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/search_charger_background"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/head_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Nearby Chargers"
+        android:textColor="#ffff"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:src="@drawable/search_icon"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/sub_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/sub_text_bg"
+        android:text="showing stations in 10km radius"
+        android:layout_below="@id/head_tv"
+        android:layout_marginLeft="18dp"
+        android:textSize="12sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/charging_station_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sub_tv"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/rv_item_home_charging_station" />
+
+</RelativeLayout>

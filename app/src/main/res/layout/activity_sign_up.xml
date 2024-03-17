@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/search_charger_background"
+    android:orientation="vertical"
+    tools:context=".activities.SignUpActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="15dp"
+        app:cardBackgroundColor="@color/charging_station_background"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/text_bg"
+                android:hint="Name"
+                android:maxLines="1"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/text_bg"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:maxLines="1"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/phone_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/text_bg"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:hint="Phone Number"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/text_bg"
+                android:hint="Password"
+                android:maxLines="1"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/retype_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/text_bg"
+                android:hint="Renter Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/sign_up_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/green_txt"
+        android:text="SignUp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_charger_background"
+    android:fillViewport="true"
+    tools:context=".activities.OrderHistoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/search_charger_background"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/head_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Order Summary"
+                android:textColor="#ffff"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head_tv"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="30dp"
+                android:text="Booking ID  - "
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/booking_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head_tv"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/tv_one"
+                android:text="PS167-9460240-668"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/charging_station_img_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/booking_id_tv"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:elevation="20dp"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/charging_station_demo_img"
+                app:shapeAppearanceOverlay="@style/roundedCoverImageView" />
+
+            <LinearLayout
+                android:id="@+id/ll_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/booking_id_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/charging_station_img_iv"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_charging_station_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/charging_station_img_iv"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Charging Point Station"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_charging_station_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:maxLines="1"
+                    android:text="Kaniyapuram,trivandrum,Kerala"
+                    android:textColor="@color/sub_text_bg"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/charging_station_icon" />
+
+                    <TextView
+                        android:id="@+id/choosen_charger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="Charger 1"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/booking_date_icon" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="24/11/2023"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/booking_time_icon" />
+
+                    <TextView
+                        android:id="@+id/booking_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="8-9PM"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_one"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_one"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Status:"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_one"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:text="Upcoming"
+                android:textColor="@color/green_txt"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/view_two"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/status_tv"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_two"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Final Amount:"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/final_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_two"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:text="--"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/final_amount"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Amount Paid:"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/advance_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/final_amount"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:text="50"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/advance_amount"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Pending Amount:"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pending_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/advance_amount"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/book_now_btn_tv"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/pending_amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/submit_button_background"
+                android:elevation="20dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="PAY NOW"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+
+
+
+            <TextView
+                android:id="@+id/how_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pending_amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="How was everything?"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/how_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:theme="@style/RatingBar"
+                android:stepSize="1"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/user_review_et"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/rating_bar"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/et_bg"
+                android:hint="Describe Your Experience"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/rating_submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_review_et"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                android:textColor="@color/white"
+                android:text="Submit Now"
+                android:visibility="gone"
+                android:textSize="18sp" />
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

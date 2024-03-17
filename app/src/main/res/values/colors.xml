@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="search_charger_background">#253644</color>
+    <color name="charging_station_background">#1A2730</color>
+    <color name="sub_text_bg">#D2D7DC</color>
+    <color name="green_txt">#60C8AC</color>
+    <color name="grey">#5F6262</color>
+</resources>

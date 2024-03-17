@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_layout"
+    android:background="@drawable/booking_date_bg"
+    android:layout_marginRight="10dp">
+
+    <TextView
+        android:id="@+id/charger_name_tv"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Charger 1"
+        android:textColor="@color/white" />
+</RelativeLayout>

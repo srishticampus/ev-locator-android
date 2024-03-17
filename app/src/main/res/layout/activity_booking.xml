@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_charger_background"
+    tools:context=".activities.BookingActivity">
+
+    <TextView
+        android:id="@+id/head_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Booking"
+        android:textColor="#ffff"
+        android:textSize="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/date_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head_tv"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="18dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/rv_item_booking_date" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_rv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Choose date to check availability"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chargers_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_one"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="18dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/rv_item_booking_chargers" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chargers_rv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Choose charger to check availability"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/time_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_two"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="18dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/rv_item_booking_time" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="₹ 50"
+            android:textColor="@color/green_txt"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Advance Booking)"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/tv_three"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/pay_now_btn_tv"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/submit_button_background"
+            android:elevation="20dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Pay Now"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>
